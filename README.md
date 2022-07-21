@@ -22,3 +22,5 @@ Type ``/globalmute <on|off>`` to toggle it on/off. After the global mute is togg
 You can simply open an issue if you want to suggest anything.
 
 You can simply open an issue if you find any bugs and I'll try to fix it as soon as possible!
+
+Updated to PM4
