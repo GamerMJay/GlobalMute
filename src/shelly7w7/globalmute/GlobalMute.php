@@ -13,7 +13,7 @@ use function str_repeat;
 
 class GlobalMute extends PluginBase implements Listener{
 
-    public function onEnable() : void{
+    public function onEnable(): void{
         $this->getServer()->getPluginManager()->registerEvents($this, $this);
     }
 
@@ -37,7 +37,7 @@ class GlobalMute extends PluginBase implements Listener{
     public function onPlayerChat(PlayerChatEvent $event){
         $config = $this->getConfig();
         if($config->get("global-mute") === true && !$event->getPlayer()->hasPermission("global.mute.chat")){
-            $event->setCancelled();
+            $event->cancel();
             $event->getPlayer()->sendMessage($config->get("chat-error", "You cannot chat while global mute is toggled on."));
         }
     }
